@@ -19,11 +19,6 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            position: fixed; /* Menambahkan fixed untuk tetap di atas */
-            top: 0; /* Agar tetap di bagian atas */
-            left: 0;
-            right: 0;
-            z-index: 1000; /* Agar header tetap di atas elemen lainnya */
         }
         .search-bar {
             display: flex;
@@ -68,9 +63,6 @@
             width: 200px;
             height: auto;
         }
-        main {
-            margin-top: 120px; /* Menambahkan margin top agar konten utama tidak tertutup header */
-        }
         .product-container {
             display: flex;
             flex-wrap: wrap;
@@ -112,7 +104,7 @@
             padding: 10px;
             background-color: #ff5722;
             color: white;
-            position: fixed;
+            position: absolute;
             bottom: 0;
             width: 100%;
         }
