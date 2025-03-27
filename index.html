@@ -18,11 +18,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .search-bar {
             display: flex;
             flex-grow: 1;
-            margin: 0 20px;
+            margin: 10px 0;
+            max-width: 300px;
+            width: 100%;
         }
         .search-bar input {
             flex-grow: 1;
@@ -42,6 +45,11 @@
             list-style: none;
             display: flex;
             gap: 15px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
         }
         nav ul li {
             display: inline;
@@ -52,7 +60,7 @@
             font-weight: bold;
         }
         .logo {
-            width: 250px; /* Sesuaikan ukuran logo */
+            width: 150px; /* Ukuran logo lebih kecil untuk perangkat mobile */
             height: auto;
         }
         .product {
@@ -87,11 +95,46 @@
             bottom: 0;
             width: 100%;
         }
+
+        /* Tambahan untuk responsivitas lebih lanjut */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            .logo {
+                width: 120px; /* Lebih kecil pada layar kecil */
+            }
+
+            .search-bar {
+                margin: 10px 0;
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .price {
+                font-size: 1.2em; /* Sesuaikan ukuran harga di perangkat kecil */
+            }
+
+            .product {
+                width: 95%;
+            }
+
+            .buy-button {
+                padding: 12px;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://i.ibb.co/hRfJTCYy/ezykasino.png" alt="Ezykasino Logo" class="logo"> <!-- Ganti dengan logo yang sesuai -->
+        <img src="https://i.ibb.co/hRfJTCYy/ezykasino.png" alt="Ezykasino Logo" class="logo">
         <div class="search-bar">
             <input type="text" placeholder="Cari di Ezykasino...">
             <button>Cari</button>
