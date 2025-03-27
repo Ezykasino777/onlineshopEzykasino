@@ -41,25 +41,47 @@
             cursor: pointer;
             color: white;
         }
-        main {
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+        .product-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 20px;
+            margin: 20px;
         }
         .product {
             background-color: white;
             padding: 20px;
-            width: 30%;
-            max-width: 350px;
+            width: 300px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
+            text-align: center;
         }
         .product img {
             width: 100%;
             height: auto;
+            object-fit: contain;
             border-radius: 10px;
             margin-bottom: 20px;
         }
@@ -77,49 +99,64 @@
             border-radius: 5px;
             margin-top: 10px;
         }
-        @media (max-width: 768px) {
-            .product {
-                width: 45%;
-            }
-        }
-        @media (max-width: 480px) {
-            .product {
-                width: 100%;
-            }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="https://i.ibb.co/hRfJTCYy/ezykasino.png" alt="Ezykasino Logo" class="logo">
+        <div class="search-bar">
+            <input type="text" placeholder="Cari di Shopee...">
+            <button>Cari</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="https://t.ly/ezypastiwin">Home</a></li>
+                <li><a href="https://t.ly/ezypastiwin">Login</a></li>
+                <li><a href="https://t.ly/Ezykasino777">Daftar</a></li>
+                <li><a href="https://t.ly/Bonusezykasino">Bonus</a></li>
+                <li><a href="https://t.ly/VIP_EZYKASINO">Komunitas</a></li>
+            </ul>
+        </nav>
     </header>
     
     <main>
-        <section class="product">
-            <img src="https://i.ibb.co/VWCyp2Tc/Bonus-10.png" alt="Gambar Produk">
-            <h2>Bonus Deposit 10%</h2>
-            <p>3.444.666 Member Aktif</p>
-            <p class="price">IDR 10.000,-</p>
-            <a href="#" class="buy-button">Beli Sekarang</a>
-        </section>
-
-        <section class="product">
-            <img src="https://i.ibb.co/1Gbfv8K3/skater-hitam-www-1.png" alt="Gambar Produk Tambahan">
-            <h2>Bonus Scatter hitam</h2>
-            <p class="price">IDR 5.000,-</p>
-            <a href="#" class="buy-button">Beli Sekarang</a>
-        </section>
-
-        <section class="product">
-            <img src="https://i.ibb.co/JjmgZr18/Extrapetir-1.png" alt="Gambar Produk Tambahan">
-            <h2>Event Extra Petir</h2>
-            <p class="price">IDR 15.000,-</p>
-            <a href="#" class="buy-button">Beli Sekarang</a>
+        <section class="product-container">
+            <div class="product">
+                <img src="https://i.ibb.co/VWCyp2Tc/Bonus-10.png" alt="Gambar Produk">
+                <h2>Bonus Deposit 10%</h2>
+                <p>3.444.666 Member Aktif</p>
+                <p><strong>Merek:</strong> Ezykasino</p>
+                <p class="price"><del>IDR 999.888,-</del> <strong>IDR 10.000,-</strong></p>
+                <a href="https://wa.me/your-number" class="buy-button">Beli Sekarang</a>
+            </div>
+            <div class="product">
+                <img src="https://i.ibb.co/1Gbfv8K3/skater-hitam-www-1.png" alt="Gambar Produk Tambahan">
+                <h2>Bonus Scatter Hitam</h2>
+                <p>Dapatkan lebih banyak bonus!</p>
+                <p class="price"><strong>IDR 5.000,-</strong></p>
+                <a href="https://wa.me/your-number" class="buy-button">Beli Sekarang</a>
+            </div>
+            <div class="product">
+                <img src="https://i.ibb.co/JjmgZr18/Extrapetir-1.png" alt="Gambar Produk Tambahan">
+                <h2>Event Extra Petir</h2>
+                <p>Perkalian tidak pecah? Kami bayar langsung!</p>
+                <p class="price"><strong>IDR 15.000,-</strong></p>
+                <a href="https://wa.me/your-number" class="buy-button">Beli Sekarang</a>
+            </div>
         </section>
     </main>
     
     <footer>
-        <p>Sudah ada sejak 2010 dan sudah terpercaya seluruh indonesia</p>
+        <p>Sudah ada sejak 2010 dan sudah terpercaya seluruh Indonesia <a href="https://10ezykasino.org/">EZYKASINO</a></p>
     </footer>
 </body>
 </html>
