@@ -19,6 +19,11 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            position: fixed; /* Menambahkan fixed untuk tetap di atas */
+            top: 0; /* Agar tetap di bagian atas */
+            left: 0;
+            right: 0;
+            z-index: 1000; /* Agar header tetap di atas elemen lainnya */
         }
         .search-bar {
             display: flex;
@@ -63,6 +68,9 @@
             width: 200px;
             height: auto;
         }
+        main {
+            margin-top: 120px; /* Menambahkan margin top agar konten utama tidak tertutup header */
+        }
         .product-container {
             display: flex;
             flex-wrap: wrap;
@@ -104,9 +112,13 @@
             padding: 10px;
             background-color: #ff5722;
             color: white;
-            position: absolute;
-            bottom: 0;
+            position: fixed;
+            bottom: -60px; /* Footer disembunyikan */
             width: 100%;
+            transition: bottom 0.3s ease-in-out; /* Animasi untuk footer */
+        }
+        footer.show {
+            bottom: 0; /* Menampilkan footer setelah scroll */
         }
     </style>
 </head>
@@ -157,5 +169,16 @@
     <footer>
         <p>Sudah ada sejak 2010 dan sudah terpercaya seluruh Indonesia <a href="https://10ezykasino.org/">EZYKASINO</a></p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const footer = document.querySelector('footer');
+            if (window.scrollY > 100) {  // Scroll lebih dari 100px
+                footer.classList.add('show');
+            } else {
+                footer.classList.remove('show');
+            }
+        });
+    </script>
 </body>
 </html>
