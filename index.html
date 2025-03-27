@@ -13,13 +13,21 @@
             background-color: #f5f5f5;
         }
         header {
-            background-color: #ff5722;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+    background-color: #ff5722;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+body {
+    padding-top: 80px; /* Tambahkan padding agar konten tidak tertutup header */
+}
         .search-bar {
             display: flex;
             flex-grow: 1;
