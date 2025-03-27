@@ -73,10 +73,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .product img {
-            width: 100%; /* Gambar mengisi lebar kotak produk */
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+    width: 100%; /* Tetap memenuhi lebar */
+    height: auto; /* Menjaga aspek rasio */
+    object-fit: contain; /* Memastikan seluruh gambar terlihat tanpa terpotong */
+    border-radius: 10px;
+    margin-bottom: 20px;
+       }
         .price {
             color: red;
             font-size: 1.5em;
